@@ -2,7 +2,7 @@
 
 Adds a suffix to a UIText Field. Great for Text Fields that use units! 
 
-![screen](https://github.com/MattFaluotico/UITextFieldWithSuffix/blob/master/screen.png)
+![screen](https://github.com/MattFaluotico/UITextFieldWithSuffix/blob/master/Screen.png)
 
 ## Using it 
 
