@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WRs-e4-mCW">
+                                <rect key="frame" x="252" y="39" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="klu-8R-8S5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4FK-zp-GL5" customClass="UITextFieldWithSuffix">
+                                <rect key="frame" x="252" y="113" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xx-yC-qI2">
+                                <rect key="frame" x="357" y="39" width="48" height="30"/>
+                                <state key="normal" title="update">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="update:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ja5-Sa-uYc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="suffix" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Nu-2Q-tcL">
+                                <rect key="frame" x="202" y="43" width="41" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WRs-e4-mCW" firstAttribute="leading" secondItem="0Nu-2Q-tcL" secondAttribute="trailing" constant="9" id="2eT-fP-pyp"/>
+                            <constraint firstItem="WRs-e4-mCW" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="19" id="4Mo-AD-jFk"/>
+                            <constraint firstItem="4FK-zp-GL5" firstAttribute="top" secondItem="WRs-e4-mCW" secondAttribute="bottom" constant="44" id="4hh-5u-ZhA"/>
+                            <constraint firstItem="WRs-e4-mCW" firstAttribute="trailing" secondItem="4FK-zp-GL5" secondAttribute="trailing" id="TcV-b2-Nxb"/>
+                            <constraint firstItem="7xx-yC-qI2" firstAttribute="leading" secondItem="WRs-e4-mCW" secondAttribute="trailing" constant="8" symbolic="YES" id="XLQ-A0-AVg"/>
+                            <constraint firstItem="4FK-zp-GL5" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Zf3-ud-xD5"/>
+                            <constraint firstItem="0Nu-2Q-tcL" firstAttribute="baseline" secondItem="7xx-yC-qI2" secondAttribute="firstBaseline" id="aNU-St-2mL"/>
+                            <constraint firstItem="WRs-e4-mCW" firstAttribute="leading" secondItem="4FK-zp-GL5" secondAttribute="leading" id="cAv-ve-Iyu"/>
+                            <constraint firstItem="0Nu-2Q-tcL" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="23" id="eB6-If-c3x"/>
+                            <constraint firstItem="7xx-yC-qI2" firstAttribute="top" secondItem="WRs-e4-mCW" secondAttribute="top" id="iJt-vB-w4x"/>
+                            <constraint firstItem="7xx-yC-qI2" firstAttribute="baseline" secondItem="0Nu-2Q-tcL" secondAttribute="baseline" id="xg5-th-ukt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="4FK-zp-GL5" id="Hmz-DC-bzR"/>
+                        <outlet property="suffix" destination="WRs-e4-mCW" id="d2G-7E-kcj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
